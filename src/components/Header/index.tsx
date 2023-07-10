@@ -21,11 +21,11 @@ const Header: React.FC<IProps> = (props) => {
         <Link href="/" className="md:inline-block hidden dark:text-white">
           Home
         </Link>
-        <Link href="/" className="md:inline-block hidden">
+        <Link href="/about" className="md:inline-block hidden">
           About
         </Link>
-        <HomeIcon className="w-8 h-8 md:hidden" />
-        <InformationCircleIcon className="w-8 h-8 md:hidden " />
+        <HomeIcon className="w-8 h-8 md:hidden dark:text-white" />
+        <InformationCircleIcon className="w-8 h-8 md:hidden dark:text-white" />
       </nav>
       <nav></nav>
       <div className="flex gap-4 items-center">

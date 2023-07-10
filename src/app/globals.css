@@ -12,6 +12,8 @@ body,
 }
 
 a,
-span {
+span,
+h2,
+p {
   @apply dark:text-white;
 }

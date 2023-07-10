@@ -5,6 +5,7 @@ import Header from "../Header";
 import { ThemeContext } from "../Providers/ThemeProvider";
 
 import { Inter } from "next/font/google";
+import Navbar from "../Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,8 +18,11 @@ const Main: React.FC<IProps> = ({ children }) => {
 
   return (
     <body className={`${inter.className} ${theme}`}>
-      <Header />
-      {children}
+      <div className="flex flex-col w-full h-full dark:bg-slate-800 transition-colors duration-300">
+        <Header />
+        <Navbar />
+        <div className="px-16 pt-8 flex-grow">{children}</div>
+      </div>
     </body>
   );
 };
