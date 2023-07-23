@@ -1,8 +1,11 @@
+import MoviesList from "@/components/MoviesList";
+
 interface IProps {
   searchParams: { [key: string]: string };
 }
 
 const fetchResponse = async (genre: string) => {
+  setTimeout(() => {}, 5000);
   const response = await fetch(
     `https://api.themoviedb.org/3/${
       genre === "fetchTopRated" ? "movie/top_rated" : "trending/all/week"
@@ -21,8 +24,11 @@ const Home: React.FC<IProps> = async ({ searchParams }) => {
   }
 
   const data = await response.json();
-  console.log(data);
-  return <div>Home</div>;
+  return (
+    <div>
+      <MoviesList data={data.results || []} />
+    </div>
+  );
 };
 
 export default Home;
