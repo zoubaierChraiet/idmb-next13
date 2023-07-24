@@ -18,7 +18,7 @@ const Main: React.FC<IProps> = ({ children }) => {
 
   return (
     <body className={`${inter.className} ${theme}`}>
-      <div className="flex flex-col w-full h-full dark:bg-slate-800 transition-colors duration-300">
+      <div className="flex flex-col w-full h-full dark:bg-slate-800 transition-colors duration-300 overflow-auto">
         <Header />
         <Navbar />
         <div className="px-16 pt-8 flex-grow">{children}</div>

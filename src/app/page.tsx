@@ -5,7 +5,6 @@ interface IProps {
 }
 
 const fetchResponse = async (genre: string) => {
-  setTimeout(() => {}, 5000);
   const response = await fetch(
     `https://api.themoviedb.org/3/${
       genre === "fetchTopRated" ? "movie/top_rated" : "trending/all/week"
@@ -25,7 +24,7 @@ const Home: React.FC<IProps> = async ({ searchParams }) => {
 
   const data = await response.json();
   return (
-    <div>
+    <div className="h-full">
       <MoviesList data={data.results || []} />
     </div>
   );
