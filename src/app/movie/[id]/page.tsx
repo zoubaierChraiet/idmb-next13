@@ -8,7 +8,9 @@ interface IProps {
   params: { [key: string]: string };
 }
 
-const fetcher = (...args: any) => fetch(...args).then((res) => res.json());
+const fetcher = (...args: any) => {
+  return fetch(args[0]).then((res) => res.json());
+};
 
 const MovieComponent: React.FC<IProps> = ({ params }) => {
   const movieId = params.id;

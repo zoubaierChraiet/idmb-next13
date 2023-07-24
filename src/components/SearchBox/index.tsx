@@ -23,7 +23,7 @@ const SearchBox: React.FC = () => {
         value={searchTerm}
         onChange={handleInputChange}
         placeholder="Search keywords..."
-        className="outline-none w-full h-12 placeholder-gray-500 rounded-sm p-2 bg-transparent"
+        className="outline-none w-full h-12 placeholder-gray-500 rounded-sm p-2 bg-transparent dark:text-white"
       />
       <button
         type="submit"
