@@ -6,6 +6,7 @@ import { ThemeContext } from "../Providers/ThemeProvider";
 
 import { Inter } from "next/font/google";
 import Navbar from "../Navbar";
+import SearchBox from "../SearchBox";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ const Main: React.FC<IProps> = ({ children }) => {
       <div className="flex flex-col w-full h-full dark:bg-slate-800 transition-colors duration-300 overflow-auto">
         <Header />
         <Navbar />
+        <SearchBox />
         <div className="px-16 pt-8 flex-grow">{children}</div>
       </div>
     </body>
